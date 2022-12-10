@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>No respond</title>
+	<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+</head>
+<body>
+<div id="chage_content">
+
+
+  <div class="container mt-5 box">
+  	<div class="container md-2">
+    <a href="./norespond.html" class="button is-danger">No respond</a>
+    <a href="./vendor.html" class="button is-link">Vendor Mail</a>
+    <a href="./close.html"class="button is-success">Close mail</a>
+    <a href="./calllog.html"class="button is-light">calllog mail</a>
+  </div>
+  <hr>
+  <div id="chage_content">
+  <div class="container mt-5 box">
+  <h1 class="title">Ticket closing</h1>
+    <div class="field">
+      <label class="label">Ticket Number</label>
+      <div class="control">
+        <input
+          class="input"
+          type="text"
+          placeholder="Enter Ticket Number"
+          id="tc_tick_number"
+        />
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">User's Name</label>
+      <div class="control">
+        <input
+          class="input"
+          type="text"
+          placeholder="Enter User's Name"
+          id="tc_uname"
+        />
+      </div>
+    </div>
+    <div class="field">
+      <button class="button is-success is-light" onclick="closeFunc()">
+        Generate
+      </button>
+    </div>
+    <div class="field" id="tc_sub">
+      <label   class="label">Email Sub</label>
+      <div class="field is-grouped">
+
+        <input
+        class="input"
+        type="text"
+        placeholder="email sub"
+        id="tc_email_sub"
+        readonly="'true"/>
+        
+        <button class="button is-success is-light ml-2" onclick="copy_ticket_closing_sub()">Copy Sub</button>
+
+      </div>
+    </div>
+    <div class="field" id="tc_msg">
+     <label class="label">Email Subject</label>
+        <textarea name="tc_msg" id="tc_msg_field" class="textarea is-large" readonly="true"></textarea>
+        <button class="button is-success is-light mt-2" onclick="copy_ticket_closing_body()">Copy Body</button>
+
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="callog.js"></script>
+<script type="text/javascript" src="close.js"></script>
+<script type="text/javascript" src="vendor.js"></script>
+<script type="text/javascript" src="norespond.js"></script>
+</body>
+</html>

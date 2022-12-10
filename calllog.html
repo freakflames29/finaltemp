@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ticket closing mail</title>
+   <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./hack.css">
+</head>
+<body>
+<div class="container mt-5 box hackcont">
+  <div class="container md-2">
+    <a href="./norespond.html" class="button is-danger">No respond</a>
+    <a href="./vendor.html" class="button is-link">Vendor Mail</a>
+    <a href="./close.html"class="button is-success">Close mail</a>
+    <a href="./calllog.html"class="button is-light">calllog mail</a>
+  </div>
+  <hr>
+  <h1 class="title">Call Log</h1>
+  <div class="field">
+    <label class="label">Ticket Number</label>
+    <div class="control">
+      <input
+        class="input"
+        type="text"
+        placeholder="Enter Ticket Number"
+        id="tcall_tnumber"/>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">User's Name</label>
+    <div class="control">
+      <input
+        class="input"
+        type="text"
+        placeholder="Enter User's Name"
+        id="tcall_uname"/>
+    </div>
+  </div>
+
+  <label class="label">Vendor</label>
+  <div class="select">
+    <select id="vendor_list">
+      <option value="HP">HP</option>
+      <option class="Acer">Acer</option>
+      <option class="Lenovo">Lenovo</option>
+      <option value="DELL">DELL</option>
+    </select>
+  </div>
+  <label class="label">Case id</label>
+  <input
+    class="input"
+    type="text"
+    placeholder="Enter case id"
+    id="tcall_caseid"/>
+
+  <div class="field mt-5">
+    <button class="button is-success" onclick="tick_call_fun()">Generate</button>
+  </div>
+
+  <div class="field" >
+    <label for="" class="label">Email Sub</label>
+    <div class="field is-grouped">
+    <input type="text" placeholder='Email Sub' readonly='true' id="tcall_sub"  class="input">
+    <button class="ml-2 button is-success is-light" onclick="copy_tick_call_close_sub()">Copy Sub</button>
+    </div>
+
+  </div>
+  <div class="field">
+    <label  class="label">Email Body</label>
+    <textarea name="tc_msg" id="tcall_msg" class="textarea is-large" readonly="true"></textarea>
+    <button class="button is-success is-light mt-2" onclick="copy_tick_call_close_body()">Copy Body</button>
+
+
+
+  </div>
+</div>
+
+
+<script type="text/javascript" src="callog.js"></script>
+<script type="text/javascript" src="close.js"></script>
+<script type="text/javascript" src="vendor.js"></script>
+<script type="text/javascript" src="norespond.js"></script>
+</body>
+</html>
