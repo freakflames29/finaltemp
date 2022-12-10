@@ -1,3 +1,10 @@
+document.getElementById('commands').onkeydown=function(e)
+{
+	if (e.keyCode==13) {
+		gen_notrespond();
+	}
+}
+
 function gen_notrespond()
 {
 	const ticket_username=document.getElementById('notrespond_tc_uname').value
@@ -8,7 +15,7 @@ function gen_notrespond()
 
 	tick_email_sub.value=`Regarding GHD Ticket | Ticket Number: ${ticket_number}`;
 
-	tick_email_body.innerHTML=`Dear ${ticket_username[0]+ticket_username.slice(1).toLowerCase()} ,
+	tick_email_body.innerHTML=`Dear ${ticket_username[0]+ticket_username.slice(1).toLowerCase()},
 Tried to reach you multiple times but the calls remains unanswered.
 Kindly connect with me as soon as you can.
 `;

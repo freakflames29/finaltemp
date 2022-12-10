@@ -1,3 +1,9 @@
+document.getElementById('commi').onkeydown=function(e)
+{
+	if (e.keyCode==13) {
+		tick_call_fun();
+	}
+}
 function tick_call_fun()
 {
 	const tick_number=document.getElementById('tcall_tnumber').value
